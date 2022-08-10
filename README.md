@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/171925d184de01b3055dc.jpg" alt="DQ-The-File-Donor Logo">
+  <img src="https://telegra.ph/file/075948dea539e8ceecf87.jpg" alt=" thefilmyspot Logo">
 </p>
 <h1 align="center">
   <b>DQ-The-File-Donor Bot</b>
