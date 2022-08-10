@@ -63,7 +63,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]▫️ {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -163,26 +163,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+                    return await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
-
+                return await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 ')
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+            return await query.answer(' Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 ')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that!", show_alert=True)
+            await query.answer("You need to be Group Owner or an Admin to do that!   \nകളി വേണ്ട കേട്ടോ 😼❗!", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -201,7 +200,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!!", show_alert=True)
+                await query.answer("That's not for you 🙆🏻 !!  \nസ്വന്തമായി വല്ലോം ചെയ്തുടെ 🤦🏽🚶🏼‍♂️ !!", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -230,7 +229,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+        return await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 ')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -251,7 +250,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+        return await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -274,7 +273,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+        return await query.answer(' Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 ')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -292,7 +291,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+        return await query.answer(' Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
     elif query.data == "backcb":
         await query.answer()
 
@@ -303,7 +302,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+            return await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
         buttons = []
         for groupid in groupids:
             try:
@@ -372,29 +371,30 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                       [
                        [
-                        InlineKeyboardButton("⚡ ᴊᴏɪɴ ɢʀᴏᴜᴘ ⚡", url="https://t.me/filmy_harbour"),
-                        InlineKeyboardButton("💥 ꜱʜᴀʀᴇ 💥", url="https://t.me/share/url?url=%F0%9F%A4%A9%20%D2%93%C9%AA%CA%9F%E1%B4%8D%CA%8F%20%CA%9C%E1%B4%80%CA%80%CA%99%E1%B4%8F%E1%B4%9C%CA%80%20%F0%9F%A4%A9%0A%0A%C2%BB%20%E1%B4%8F%C9%B4%20%E1%B4%9B%CA%9C%E1%B4%87%20s%E1%B4%98%E1%B4%8F%E1%B4%9B%20%CA%80%E1%B4%87s%E1%B4%98%E1%B4%8F%C9%B4s%E1%B4%87.%0A%C2%BB%20%F0%9D%9F%B8%F0%9D%9F%BAx%F0%9D%9F%BD%20%E1%B4%8F%C9%B4%CA%9F%C9%AA%C9%B4%E1%B4%87.%0A%C2%BB%20%E1%B4%A1%C9%AA%E1%B4%85%E1%B4%87%20%E1%B4%A0%E1%B4%80%CA%80%C9%AA%E1%B4%87%E1%B4%9B%CA%8F%20%E1%B4%8F%D2%93%20%E1%B4%8F%CA%9F%E1%B4%85%20%E1%B4%80%C9%B4%E1%B4%85%20%C9%B4%E1%B4%87%E1%B4%A1%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%84%E1%B4%8F%CA%9F%CA%9F%E1%B4%87%E1%B4%84%E1%B4%9B%C9%AA%E1%B4%8F%C9%B4s%20%C9%AA%C9%B4%20%E1%B4%80%CA%9F%CA%9F%20%CA%9F%E1%B4%80%C9%B4%C9%A2%E1%B4%9C%E1%B4%80%C9%A2%E1%B4%87s.%0A%C2%BB%20%E1%B4%80%E1%B4%85%E1%B4%8D%C9%AA%C9%B4%20s%E1%B4%9C%E1%B4%98%E1%B4%98%E1%B4%8F%CA%80%E1%B4%9B.%0A%C2%BB%20%F0%9D%9F%BD%20%CA%9F%E1%B4%80%E1%B4%8B%CA%9C%2B%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%80%C9%B4%E1%B4%85%20s%E1%B4%87%CA%80%C9%AA%E1%B4%87s%20%D2%93%C9%AA%CA%9F%E1%B4%87s.%0A%0A%E2%98%85%20%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%C9%B4%E1%B4%8F%E1%B4%A1%20%E2%98%85%0A%40filmy_harbour%0A%40filmy_harbour%0A%40filmy_harbour%0A%0A%E2%98%85%20s%CA%9C%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%9B%CA%9C%C9%AAs%20%E1%B4%8D%E1%B4%87ss%E1%B4%80%C9%A2%E1%B4%87%20%E1%B4%9B%E1%B4%8F%20%CA%8F%E1%B4%8F%E1%B4%9C%CA%80%20%D2%93%CA%80%C9%AA%E1%B4%87%C9%B4%E1%B4%85s%20%E2%98%85")
+                        InlineKeyboardButton(" REQUEST MOVIES 📺 ", url="https://t.me/thefilmyspot"),
+                        InlineKeyboardButton("💥 SHARE  💥", url="https://t.me/share/url?url=%F0%9F%A4%A9%20%D2%93%C9%AA%CA%9F%E1%B4%8D%CA%8F%20%CA%9C%E1%B4%80%CA%80%CA%99%E1%B4%8F%E1%B4%9C%CA%80%20%F0%9F%A4%A9%0A%0A%C2%BB%20%E1%B4%8F%C9%B4%20%E1%B4%9B%CA%9C%E1%B4%87%20s%E1%B4%98%E1%B4%8F%E1%B4%9B%20%CA%80%E1%B4%87s%E1%B4%98%E1%B4%8F%C9%B4s%E1%B4%87.%0A%C2%BB%20%F0%9D%9F%B8%F0%9D%9F%BAx%F0%9D%9F%BD%20%E1%B4%8F%C9%B4%CA%9F%C9%AA%C9%B4%E1%B4%87.%0A%C2%BB%20%E1%B4%A1%C9%AA%E1%B4%85%E1%B4%87%20%E1%B4%A0%E1%B4%80%CA%80%C9%AA%E1%B4%87%E1%B4%9B%CA%8F%20%E1%B4%8F%D2%93%20%E1%B4%8F%CA%9F%E1%B4%85%20%E1%B4%80%C9%B4%E1%B4%85%20%C9%B4%E1%B4%87%E1%B4%A1%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%84%E1%B4%8F%CA%9F%CA%9F%E1%B4%87%E1%B4%84%E1%B4%9B%C9%AA%E1%B4%8F%C9%B4s%20%C9%AA%C9%B4%20%E1%B4%80%CA%9F%CA%9F%20%CA%9F%E1%B4%80%C9%B4%C9%A2%E1%B4%9C%E1%B4%80%C9%A2%E1%B4%87s.%0A%C2%BB%20%E1%B4%80%E1%B4%85%E1%B4%8D%C9%AA%C9%B4%20s%E1%B4%9C%E1%B4%98%E1%B4%98%E1%B4%8F%CA%80%E1%B4%9B.%0A%C2%BB%20%F0%9D%9F%BD%20%CA%9F%E1%B4%80%E1%B4%8B%CA%9C%2B%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%80%C9%B4%E1%B4%85%20s%E1%B4%87%CA%80%C9%AA%E1%B4%87s%20%D2%93%C9%AA%CA%9F%E1%B4%87s.%0A%0A%E2%98%85%20%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%C9%B4%E1%B4%8F%E1%B4%A1%20%E2%98%85%0A%40filmy_harbour%0A%40filmy_harbour%0A%40filmy_harbour%0A%0A%E2%98%85%20s%CA%9C%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%9B%CA%9C%C9%AAs%20%E1%B4%8D%E1%B4%87ss%E1%B4%80%C9%A2%E1%B4%87%20%E1%B4%9B%E1%B4%8F%20%CA%8F%E1%B4%8F%E1%B4%9C%CA%80%20%D2%93%CA%80%C9%AA%E1%B4%87%C9%B4%E1%B4%85s%20%E2%98%85")
                      ],[
                         InlineKeyboardButton("🔖 ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴜʙᴛɪᴛʟᴇ 🔖", url="https://telegra.ph/DOWNLOAD-SUBTITLES-01-05")
                        ]
                       ]
                     )
                     )
-                await query.answer('Check PM, I have sent files in pm', show_alert=True)
+                await query.answer('Check Your PM 📥👀 \nI Just Send That Files For You 😻🤍', show_alert=True)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('Unblock the bot First 😤  \nThen Try Again ♻️!', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("Join our Back-up channel mahn! 😒", show_alert=True)
+            await query.answer("I Like Your Smartness, But Don't Be Oversmart 🥴   \nവേളച്ചിൽ എടുക്കരുത് കേട്ടോ 😤", show_alert=True)
+            return", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('No such file exist 🙂.')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -418,7 +418,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                       [
                        [
-                        InlineKeyboardButton("⚡ ᴊᴏɪɴ ɢʀᴏᴜᴘ ⚡", url="https://t.me/filmy_harbour"),
+                        InlineKeyboardButton(" REQUEST MOVIES 📺 ", url="https://t.me/thefilmyspot"),
                         InlineKeyboardButton("💥 ꜱʜᴀʀᴇ 💥", url="https://t.me/share/url?url=%F0%9F%A4%A9%20%D2%93%C9%AA%CA%9F%E1%B4%8D%CA%8F%20%CA%9C%E1%B4%80%CA%80%CA%99%E1%B4%8F%E1%B4%9C%CA%80%20%F0%9F%A4%A9%0A%0A%C2%BB%20%E1%B4%8F%C9%B4%20%E1%B4%9B%CA%9C%E1%B4%87%20s%E1%B4%98%E1%B4%8F%E1%B4%9B%20%CA%80%E1%B4%87s%E1%B4%98%E1%B4%8F%C9%B4s%E1%B4%87.%0A%C2%BB%20%F0%9D%9F%B8%F0%9D%9F%BAx%F0%9D%9F%BD%20%E1%B4%8F%C9%B4%CA%9F%C9%AA%C9%B4%E1%B4%87.%0A%C2%BB%20%E1%B4%A1%C9%AA%E1%B4%85%E1%B4%87%20%E1%B4%A0%E1%B4%80%CA%80%C9%AA%E1%B4%87%E1%B4%9B%CA%8F%20%E1%B4%8F%D2%93%20%E1%B4%8F%CA%9F%E1%B4%85%20%E1%B4%80%C9%B4%E1%B4%85%20%C9%B4%E1%B4%87%E1%B4%A1%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%84%E1%B4%8F%CA%9F%CA%9F%E1%B4%87%E1%B4%84%E1%B4%9B%C9%AA%E1%B4%8F%C9%B4s%20%C9%AA%C9%B4%20%E1%B4%80%CA%9F%CA%9F%20%CA%9F%E1%B4%80%C9%B4%C9%A2%E1%B4%9C%E1%B4%80%C9%A2%E1%B4%87s.%0A%C2%BB%20%E1%B4%80%E1%B4%85%E1%B4%8D%C9%AA%C9%B4%20s%E1%B4%9C%E1%B4%98%E1%B4%98%E1%B4%8F%CA%80%E1%B4%9B.%0A%C2%BB%20%F0%9D%9F%BD%20%CA%9F%E1%B4%80%E1%B4%8B%CA%9C%2B%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87%20%E1%B4%80%C9%B4%E1%B4%85%20s%E1%B4%87%CA%80%C9%AA%E1%B4%87s%20%D2%93%C9%AA%CA%9F%E1%B4%87s.%0A%0A%E2%98%85%20%E1%B4%8A%E1%B4%8F%C9%AA%C9%B4%20%C9%B4%E1%B4%8F%E1%B4%A1%20%E2%98%85%0A%40filmy_harbour%0A%40filmy_harbour%0A%40filmy_harbour%0A%0A%E2%98%85%20s%CA%9C%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%9B%CA%9C%C9%AAs%20%E1%B4%8D%E1%B4%87ss%E1%B4%80%C9%A2%E1%B4%87%20%E1%B4%9B%E1%B4%8F%20%CA%8F%E1%B4%8F%E1%B4%9C%CA%80%20%D2%93%CA%80%C9%AA%E1%B4%87%C9%B4%E1%B4%85s%20%E2%98%85")
                      ],[
                         InlineKeyboardButton("🔖 ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴜʙᴛɪᴛʟᴇ 🔖", url="https://telegra.ph/DOWNLOAD-SUBTITLES-01-05")
@@ -440,15 +440,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'https://t.me/auto_m4_mallumovies_bot?startgroup=true')
+                    InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'https://t.me/auto_m4_mallumovies_bot?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🤴ʙᴏᴛ ᴏᴡɴᴇʀ🤴', callback_data="owner_info"),
-                    InlineKeyboardButton('🍿ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ🍿', url='https://t.me/filmy_harbour')
+                    InlineKeyboardButton('🔍 Search Here🔻 ', switch_inline_query_current_chat=''),
+                    InlineKeyboardButton('🍿REQUEST MOVIES 📺', url='https://t.me/thefilmyspot')
                 ],[
                     InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💥 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 💥', url='https://t.me/+LJRsBp82HiJhNDhl')
+                    InlineKeyboardButton('💥 Updates Channel  💥', url='https://t.me/thefilmyspotin')
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -457,7 +457,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+        await query.answer('Join ')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -467,7 +467,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Extra Mods', callback_data='extra')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton(' Status 🚀', callback_data='stats')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -478,8 +478,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🍿Movie Group🍿', url='https://t.me/+wHX4yUfmj91iNmJl'),
-            InlineKeyboardButton('❤️ Source Code', callback_data='source')
+            InlineKeyboardButton('🍿Movie Group🍿', url='https://t.me/+G-h3RTr97Mo4ZDhl'),
+            InlineKeyboardButton('HELP 🚨', url='https://t.me/filmyspothelpbot')
         ],[
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
@@ -569,9 +569,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
+        Total Files = await Media.count_documents()
+        Users = await db.total_users_count()
+        Groups = await db.total_chat_count()
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
@@ -582,7 +582,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "rfrsh":
-        await query.answer("Fetching MongoDb DataBase")
+        await query.answer("Fetching 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 DataBase 💿")
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('♻️', callback_data='rfrsh')
@@ -590,7 +590,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
-        chats = await db.total_chat_count()
+        Groups = await db.total_chat_count()
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
@@ -603,7 +603,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ", url="t.me/creatorbeatz")
+                    InlineKeyboardButton("Admin 🌝", url="t.me/abhinand3510")
                   ]]
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
@@ -618,7 +618,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('JOIN FILMY HARBOUR')
+            return await query.answer('JOIN 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -677,7 +677,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Jᴏɪɴ Fɪʟᴍʏ Hᴀʀʙᴏᴜʀ')
+    await query.answer('Join 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭')
 
     
 async def auto_filter(client, msg, spoll=False):
@@ -706,7 +706,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]▫️ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -784,7 +784,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hey {message.from_user.mention}, Here is What I Found In My Database For Your Query {search}.</b>"
+        cap = f"<b>Hey {message.from_user.mention}, Results Found For Your ReQuest... {search}.</b>"
     if imdb and imdb.get('poster'):
         try:
             if settings["auto_ffilter"]:
