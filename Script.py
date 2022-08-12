@@ -107,7 +107,7 @@ I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟ�
 
 MVE_NT_FND = """ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ..."""
 
-TOP_ALRT_MSG = """𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐦𝐨𝐯𝐢𝐞 𝐢𝐧 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞..."""
+TOP_ALRT_MSG = """𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐦𝐨𝐯𝐢𝐞 𝐢𝐧 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞 💿..."""
 
 MELCOW_ENG = """<b>Hello {}😍, and welcome to {} Group.❤️
 
@@ -127,7 +127,7 @@ Do not contact Admin directly...
 
 If you want to contact Admin, Please send the message to @thefilmyspothelpbot and the bot will deliver the message to the group Admin...
 
-<a href='https://t.me/thefilmyspothelpbot'>If you are facing any problems with our movie files, bots or groups, report it in our support group @filmy_harbour_support</a>
+<a href='https://t.me/thefilmyspothelpbot'>If you are facing any problems with our movie files, bots or groups, report it in our Feedback Bot : @thefilmyspothelp</a>
 
 For admin support type @admins with your message and the bot will forward the message to the admin...</b>"""
 
