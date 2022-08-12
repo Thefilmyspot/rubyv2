@@ -111,7 +111,7 @@ async def next_page(bot, query):
             ],
         )
     btn.insert(0, [
-        InlineKeyboardButton(" Cʜᴇᴄᴋ Bᴏᴛ PM 🌝👀", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton(" CHECK BOT PM HERE🌝👀", url=f"https://t.me/{temp.U_NAME}")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -665,7 +665,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton('Auto Delete',
                                          callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('10 Mins' if settings["auto_delete"] else 'OFF',
+                    InlineKeyboardButton('15 Minutes' if settings["auto_delete"] else 'OFF',
                                          callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{str(grp_id)}')
                 ],
                 [
@@ -790,7 +790,7 @@ async def auto_filter(client, msg, spoll=False):
             if settings["auto_ffilter"]:
                 hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
                 if settings['auto_delete']:
-                    await asyncio.sleep(600)
+                    await asyncio.sleep(900)
                     await hehe.delete()
                     await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
@@ -799,7 +799,7 @@ async def auto_filter(client, msg, spoll=False):
                 poster = pic.replace('.jpg', "._V1_UX360.jpg")
                 hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
                 if settings['auto_delete']:
-                    await asyncio.sleep(600)
+                    await asyncio.sleep(900)
                     await hmm.delete()
                     await message.delete()
         except Exception as e:
@@ -807,14 +807,14 @@ async def auto_filter(client, msg, spoll=False):
             if settings["auto_ffilter"]:
                 fek = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
                 if settings['auto_delete']:
-                    await asyncio.sleep(600)
+                    await asyncio.sleep(900)
                     await fek.delete()
                     await message.delete()
     else:
         if settings["auto_ffilter"]:
             fuk = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(900)
                 await fuk.delete()
                 await message.delete()
     if spoll:
