@@ -79,7 +79,7 @@ async def send_for_index(bot, message):
     except:
         return await message.reply('Make Sure That Bot is Admin On That Channel, if channel is private')
     if k.empty:
-        return await message.reply('This may be group &  I'm Not Admin There.')
+        return await message.reply('This may be group &  I am Not an Admin There.')
 
     if message.from_user.id in ADMINS:
         buttons = [
