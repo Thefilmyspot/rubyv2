@@ -568,9 +568,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        Total Files = await Media.count_documents()
+        total = await Media.count_documents()
         Users = await db.total_users_count()
-        Groups = await db.total_chat_count()
+        chats = await db.total_chat_count()
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
@@ -589,7 +589,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
-        Groups = await db.total_chat_count()
+        chats = await db.total_chat_count()
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
