@@ -4,16 +4,20 @@ class script(object):
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✿  𝙼𝚈 𝙽𝙰𝙼𝙴: {}
+
 ✿  𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/ABHINAND3510>A҉B҉H҉I҉N҉A҉N҉D҉</a>
+
 ✿  𝙻𝙸𝙱𝚁𝙰𝚁𝚈 & 𝙻𝙰𝙽𝙶: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 | 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
+
 ✿  𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 & 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙼𝙾𝙽𝙶𝙾𝙳𝙱 | 𝙷𝙴𝚁𝙾𝙺𝚄
-✿  𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+
+✿  𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Source - https://t.me/thefilmyspot
 <b>DEVS:</b>
-- <a href=https://t.me/thefilmyspot>RUBY 💛😚</a>"""
+- <a href=https://t.me/thefilmyspotin>🌝🤍</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
-- Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
+- Filter is the feature were users can set automated replies for a particular keyword and Bot will respond whenever a keyword is found the message
 <b>NOTE:</b>
 1. should have admin privillage.
 2. only admins can add filters in a chat.
@@ -30,7 +34,7 @@ class script(object):
 2. supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/RubymathewsBot)</code>
+<code>[Button Text](buttonurl:https://t.me/thefilmyspotbot)</code>
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message Hehe😆)</code>"""
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
@@ -51,7 +55,7 @@ class script(object):
 • /connections - <code>list all your connections</code>"""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 <b>NOTE:</b>
-these are the extra features of RUBY😚
+these are the extra features of Bot🌝🏷️
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specified user.</code>
 • /info  - <code>get information about a user.</code>
@@ -59,7 +63,7 @@ these are the extra features of RUBY😚
 • /search  - <code>get the film information from various sources.</code>"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 <b>NOTE:</b>
-This module only works for my admins😼
+This module only works for my Admins😼
 <b>Commands and Usage:</b>
 • /logs - <code>to get the rescent errors</code>
 • /stats - <code>to get status of files in db.</code>
@@ -82,7 +86,7 @@ Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
 Added By - {}
 """
-    LOG_TEXT_P = """#NewUser
+    LOG_TEXT_P = """#NewUser 🌝🤍
 ID - <code>{}</code>
 Name - {}
 """
@@ -125,7 +129,7 @@ NB: You can only get the movie by typing in the correct spelling...
 
 If you do not get the Movie / Series, mention the admin in the following format 👇
 
-🤷 Example: @admin Avengers
+🤷 Example: @admin Avatar 2009 English 
             @admin Breaking Bad S05E07
 Wᴇ Dᴏ Nᴏᴛ Oᴡɴ Aɴʏ Cᴏɴᴛᴇɴᴛ Pᴏsᴛᴇᴅ Hᴇʀᴇ. Wᴇ Oɴʟʏ Sʜᴀʀᴇ Tʜᴏsᴇ Fɪʟᴇs Wʜɪᴄʜ Aʀᴇ Aʟʀᴇᴀᴅʏ Sʜᴀʀᴇᴅ Bʏ Sᴏᴍᴇʙᴏᴅʏ Eʟsᴇ Oɴ Tʜᴇ Iɴᴛᴇʀɴᴇᴛ
 
