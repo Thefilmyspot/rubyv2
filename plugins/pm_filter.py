@@ -377,7 +377,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                       ]
                     )
                     )
-                await query.answer('Check Your PM 📥👀 \nI Just Send That Files For You 😻🤍', show_alert=True)
+                await query.answer('Check Your PM 📥👀 \n\nI Just Send That Files For You 😻🤍', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot First 😤  \nThen Try Again ♻️!', show_alert=True)
         except PeerIdInvalid:
@@ -432,7 +432,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 15 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n© 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭", show_alert=True)
 
     elif query.data == "minfo":
-        await query.answer("⭕ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ⭕\n\nSEARCH MOVIE NAME ON GOOGLE ➠ COPY NAME & YEAR ➠ PASTE ON GROUP ➠ 🚯 DON'T USE ANY SYMBOLS ➠ (:!,./)\n\nEXAMPLE : \n• Vikram 2022 Malayalam\n• Breaking Bad S05E14", show_alert=True)
+        await query.answer("⭕ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ⭕\n\n➠ SEARCH MOVIE NAME ON GOOGLE ➠ COPY NAME & YEAR ➠ PASTE ON GROUP ➠ 🚯 DON'T USE ANY SYMBOLS ➠ (:!,./)\n\nEXAMPLE : \n• Vikram 2022 Malayalam\n• Breaking Bad S05E14", show_alert=True)
     
     elif query.data == "start":
         buttons = [[
