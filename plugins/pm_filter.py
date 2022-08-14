@@ -417,7 +417,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                        [
                         InlineKeyboardButton('🔍 Search Files Inline🔻 ', switch_inline_query_current_chat='')
                      ],[
-                        InlineKeyboardButton(" Group 📺 ", url="https://t.me/thefilmyspot"),
+                        InlineKeyboardButton("Join Group 📺 ", url="https://t.me/thefilmyspot"),
                         InlineKeyboardButton("💥 ꜱʜᴀʀᴇ 💥", url="https://t.me/share/url?url=https://t.me/thefilmyspotin")
                      ],[
                         InlineKeyboardButton("Subtitles 🔖", url="https://telegra.ph/DOWNLOAD-SUBTITLES-08-12")
@@ -436,7 +436,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'https://t.me/thefilmyspotbot?startgroup=true')
+                    InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'https://t.me/rubymathewsbot?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔍 Search Here🔻 ', switch_inline_query_current_chat=''),
                     InlineKeyboardButton('🍿REQUEST MOVIES 📺', url='https://t.me/thefilmyspot')
