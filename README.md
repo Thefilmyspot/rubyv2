@@ -108,7 +108,7 @@
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/abhinand2608/anadearmas">
+<a href="https://heroku.com/deploy?template=https://github.com/Thefilmyspot/rubyv22">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy To Heroku">
 </a>
 </p>
