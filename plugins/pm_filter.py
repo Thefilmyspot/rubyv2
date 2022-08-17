@@ -373,13 +373,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 else:
                     await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
             else:
-            if clicked == typed:
-                await client.send_cached_media(
-                    chat_id=query.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if ident == "filep" else False,
-                    reply_markup=InlineKeyboardMarkup(
+                if clicked == typed:
+                    await client.send_cached_media(
+                        chat_id=query.from_user.id,
+                        file_id=file_id,
+                        caption=f_caption,
+                        protect_content=True if ident == "filep" else False,
+                        reply_markup=InlineKeyboardMarkup(
                       [
                        [
                         InlineKeyboardButton(" Group 📺 ", url="https://t.me/thefilmyspot")
