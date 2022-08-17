@@ -364,15 +364,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if clicked == typed:
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
-            else:
-                await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
-         elif settings['botpm']:
+                else:
+                    await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
+            elif settings['botpm']:
                 if clicked == typed:
-                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                        return
-              else:
-                await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
-           else:
+                    await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                    return
+                else:
+                    await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
+            else:
             if clicked == typed:
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
