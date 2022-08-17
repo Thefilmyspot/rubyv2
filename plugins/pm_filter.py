@@ -334,6 +334,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             alert = alert.replace("\\n", "\n").replace("\\t", "\t")
             await query.answer(alert, show_alert=True)
     if query.data.startswith("file"):
+        clicked = query.from_user.id
+        try:
+            typed = query.message.reply_to_message.from_user.id
+        except:
+                typed = query.from_user.id
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
@@ -356,18 +361,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                return
+                if clicked == typed:
+                    await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                    return
+                else:
+                    await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
             elif settings['botpm']:
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                return
+                if clicked == typed:
+                    await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                    return
+                else:
+                    await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
             else:
-                await client.send_cached_media(
-                    chat_id=query.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if ident == "filep" else False,
-                    reply_markup=InlineKeyboardMarkup(
+                if clicked == typed:
+                    await client.send_cached_media(
+                        chat_id=query.from_user.id,
+                        file_id=file_id,
+                        caption=f_caption,
+                        protect_content=True if ident == "filep" else False,
+                        reply_markup=InlineKeyboardMarkup(
                       [
                        [
                         InlineKeyboardButton(" Group 📺 ", url="https://t.me/thefilmyspot")
@@ -377,6 +389,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                       ]
                     )
                     )
+                else:
+                    await query.answer(f"Hey {query.from_user.first_name}, This is not your Movie ReQuest ❗ \nReQuest Yourself With Movie Name & Year !", show_alert=True)
                 await query.answer('\nCheck Your PM 📥👀 \n\nI Just Send That Files For You 😻🤍', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot First 😤  \nThen Try Again ♻️!', show_alert=True)
@@ -827,7 +841,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply(script.I_CUDNT.format(RQST))
-        await asyncio.sleep(8)
+        await asyncio.sleep(30)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -856,7 +870,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply(script.I_CUD_NT.format(RQST))
-        await asyncio.sleep(8)
+        await asyncio.sleep(30)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
@@ -867,9 +881,13 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply_photo(photo=(SPELL_IMG),
-                          caption=(script.CUDNT_FND.format(RQST)),
-                    reply_markup=InlineKeyboardMarkup(btn))
+    spell_check_del = await msg.reply_photo(
+        photo=(SPELL_IMG),
+        caption=(CUDNT_FND.format(RQST)),
+        reply_markup=InlineKeyboardMarkup(btn)
+    )
+    await asyncio.sleep(600)
+    await spell_check_del.delete()
 
 
 async def manual_filters(client, message, text=False):
