@@ -337,7 +337,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         clicked = query.from_user.id
         try:
             typed = query.message.reply_to_message.from_user.id
-            except:
+        except:
                 typed = query.from_user.id
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
