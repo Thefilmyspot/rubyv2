@@ -96,10 +96,8 @@ OLD_ALRT_TXT = """ʜᴇʏ {},
 
 ᴘʟᴇᴀꜱᴇ ꜱᴇɴᴅ ᴛʜᴇ ʀᴇQᴜᴇꜱᴛ ᴀɢᴀɪɴ."""
 
-
-    CUDNT_FND = """NOT FOUND ANYTHING RELATED TO /n{}
-/nCHOOSE ANY NAME BELOW 👇🏼!
-"""
+CUDNT_FND = """NOT FOUND ANYTHING RELATED TO /n{}
+/nCHOOSE ANY NAME BELOW 👇🏼!"""
 
 I_CUDNT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {} 
 Choose Any Name Given Below 👇🏼"""
