@@ -443,7 +443,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
 
     elif query.data == "reqinfo":
-        await query.answer("⚠THIS REQUEST MSG AUTO-DELETES IN 15 MIN.⚠\n\nIF YOU DO NOT SEE THE REQUESTED MOVIE/SERIES, LOOK AT THE NEXT PAGE⏭️\n\nNB: DO NOT DOWNLOAD FILES WITH FILE NAME THAT CONTAINS PreDvd, HdCam, PreDvdRip, HdCamRip, Theatre Print \n\n© 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭", show_alert=True)
+        await query.answer("⚠THIS REQUEST MSG AUTO-DELETES IN 15 MIN.⚠\n\nIF YOU NOT SEE THE REQUESTED MOVIE/SERIES, LOOK AT THE NEXT PAGE⏭️\nNB: DO NOT DOWNLOAD FILES THAT CONTAINS FILENAME WITH Pre-Dvd Rip, HdCam Rip, Theatre Print etc...\n© 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭", show_alert=True)
 
     elif query.data == "minfo":
         await query.answer("⭕ ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ ⭕\n\n➠ SEARCH MOVIE NAME ON GOOGLE \n➠ COPY NAME & YEAR \n➠ PASTE ON GROUP \n➠ 🚯 DON'T USE ANY SYMBOLS ➠ (:!,./)\n\nEXAMPLE : \n• Vikram 2022 Malayalam\n• Breaking Bad S05E14", show_alert=True)
