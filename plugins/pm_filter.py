@@ -443,7 +443,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
 
     elif query.data == "reqinfo":
-        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 15 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n© 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭", show_alert=True)
+        await query.answer("⚠THIS REQUEST MSG AUTO-DELETES IN 15 MIN.⚠\n\nIF YOU DO NOT SEE THE REQUESTED MOVIE/SERIES, LOOK AT THE NEXT PAGE⏭️\n\nNB: DO NOT DOWNLOAD FILES WITH FILE NAME THAT CONTAINS PreDvd, HdCam, PreDvdRip, HdCamRip, Theatre Print \n\n© 𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭", show_alert=True)
 
     elif query.data == "minfo":
         await query.answer("⭕ ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ ⭕\n\n➠ SEARCH MOVIE NAME ON GOOGLE \n➠ COPY NAME & YEAR \n➠ PASTE ON GROUP \n➠ 🚯 DON'T USE ANY SYMBOLS ➠ (:!,./)\n\nEXAMPLE : \n• Vikram 2022 Malayalam\n• Breaking Bad S05E14", show_alert=True)
@@ -793,7 +793,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hey {message.from_user.mention}, Results Found For Your ReQuest... {search}.</b>"
+        cap = f"<b>Hey {message.from_user.mention}🌝, Results Found For Your ReQuest... {search}.</b>"
     if imdb and imdb.get('poster'):
         try:
             if settings["auto_ffilter"]:
@@ -883,7 +883,7 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     spell_check_del = await msg.reply_photo(
         photo=(SPELL_IMG),
-        caption=(script.I_CUDNT.format(RQST)),
+        caption=(script.CUDNT_FND.format(RQST)),
         reply_markup=InlineKeyboardMarkup(btn)
     )
     await asyncio.sleep(600)
